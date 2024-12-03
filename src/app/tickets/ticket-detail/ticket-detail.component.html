@@ -1,0 +1,7 @@
+
+<div *ngIf="ticket">
+  <h2>Детали Тикета</h2>
+  <p>ID: {{ ticket.id }}</p>
+  <p>Название: {{ ticket.title }}</p>
+  <p>Дата создания: {{ ticket.creationDate | date : "short" }}</p>
+</div>

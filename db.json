@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin",
+      "firstName": "asf",
+      "lastName": "Админов",
+      "birthDate": "1990-01-01",
+      "city": "Москва"
+    },
+    {
+      "id": "2",
+      "username": "123",
+      "password": "123",
+      "firstName": "ОдинДваТришный",
+      "lastName": "ОДТ",
+      "birthDate": "1990-12-12",
+      "city": "Новосибирск"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Проблема с входом",
+      "creationDate": "2023-01-01T10:00:00Z"
+    },
+    {
+      "id": "2",
+      "userId": 2,
+      "title": "Ошибка на сайте",
+      "creationDate": "2023-02-01T12:00:00Z"
+    }
+  ]
+}

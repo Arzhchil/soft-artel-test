@@ -1,0 +1,25 @@
+<div class="login-container">
+  <h2>Вход</h2>
+  <form (ngSubmit)="onLogin()">
+    <label>
+      Логин:
+      <input type="text" [(ngModel)]="username" name="username" required />
+    </label>
+    <br />
+    <label>
+      Пароль:
+      <input
+        [type]="hidePassword ? 'password' : 'text'"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+      <button type="button" (click)="hidePassword = !hidePassword">
+        {{ hidePassword ? "Показать" : "Скрыть" }}
+      </button>
+    </label>
+    <br />
+    <button type="submit">Войти</button>
+    <div *ngIf="errorMessage">{{ errorMessage }}</div>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<div *ngIf="user">
+  <h2>Профиль пользователя</h2>
+  <form (ngSubmit)="onSave()">
+    <label>
+      ID:
+      <input type="text" [(ngModel)]="user.id" name="id" disabled />
+    </label>
+    <br />
+    <label>
+      Логин:
+      <input type="text" [(ngModel)]="user.username" name="username" disabled />
+    </label>
+    <br />
+    <label>
+      Имя:
+      <input
+        type="text"
+        [(ngModel)]="user.firstName"
+        name="firstName"
+        required
+      />
+    </label>
+    <br />
+    <label>
+      Фамилия:
+      <input type="text" [(ngModel)]="user.lastName" name="lastName" required />
+    </label>
+    <br />
+    <label>
+      Дата рождения:
+      <input
+        type="date"
+        [(ngModel)]="user.birthDate"
+        name="birthDate"
+        required
+      />
+    </label>
+    <br />
+    <label>
+      Город:
+      <select [(ngModel)]="user.city" name="city" required>
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </select>
+    </label>
+    <br />
+    <button type="submit">Сохранить</button>
+  </form>
+
+  <button (click)="onLogout()">Выйти</button>
+
+  <button (click)="goToTickets()">Мои Тикеты</button>
+</div>

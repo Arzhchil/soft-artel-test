@@ -1,0 +1,25 @@
+<h2>Мои Тикеты</h2>
+<div class="back-to-profile">
+  <button (click)="goBackToProfile()">Вернуться к профилю</button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Название</th>
+      <th>Дата создания</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ticket of tickets">
+      <td>{{ ticket.id }}</td>
+      <td>{{ ticket.title }}</td>
+      <td>{{ ticket.creationDate | date : "short" }}</td>
+      <td>
+        <a [routerLink]="['/tickets', ticket.id]">Подробнее</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
